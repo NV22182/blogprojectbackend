@@ -6,12 +6,14 @@ import {
   invalidPathHandler,
 } from "./middleware/errorHandler";
 
+// Routes
 import userRoutes from "./routes/userRoutes";
 
 dotenv.config();
 connectDB();
 const app = express();
 app.use(express.json());
+
 app.get("/", (req, res) => {
   res.send("Server is running...");
 });
